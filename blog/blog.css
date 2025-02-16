@@ -9,12 +9,12 @@ body {
     background-color: #f8f4f0;
   }
   
-  h1 {
-    font-family: 'Lora', serif;
-    text-align: center;
-    color: #AF1B3F;
-    margin: 20px 0;
-  }
+h1 {
+  font-family: 'Lora', serif;
+  text-align: center;
+  color: #AF1B3F;
+  margin: 20px 0;
+}
   
   a {
     color: #AF1B3F;
@@ -95,4 +95,24 @@ body {
     border: 1px solid #EFC69B;
     border-radius: 10px;
   }
-  
+.details{
+  text-align: right;
+  min-width: 180px;
+  padding-right: 15px;
+  border-right: 2px solid #EFC69B;
+}
+.details p:first-child {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.content img {
+  display: block;
+  margin: 10px auto;
+  max-width: 120px;
+  border-radius: 10px;
+}
+aside {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f8e6d1;
+}
