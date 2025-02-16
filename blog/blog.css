@@ -71,16 +71,18 @@ body {
     grid-template-columns: 3fr 1fr;
     gap: 20px;
     padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
   }
   
   article {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 10px;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
     border: 1px solid #EFC69B;
-    padding: 10px;
     border-radius: 10px;
+    background-color: white;
   }
   
   article img {
