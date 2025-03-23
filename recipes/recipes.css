@@ -110,7 +110,7 @@ footer .footer-right img {
 
 .search-bar button {
     background-color: var(--primary-color);
-    color: white;
+    color: blue;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
