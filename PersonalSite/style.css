@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* === CSS VARIABLES === */
+:root {
+  --primary-color: #22577A;
+  --secondary-color: #38A3A5;
+  --accent1-color: #80ED99;
+  --accent2-color: #C7F9CC;
+
+  --heading-font: "Raleway", sans-serif;
+  --paragraph-font: "Raleway", sans-serif;
+
+  --headline-color-on-white: var(--primary-color);
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: var(--primary-color);
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: var(--primary-color);
+  --nav-link-color: var(--primary-color);
+  --nav-background-color: var(--secondary-color);
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: var(--primary-color);
+}
+
+/* === BASE STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: var(--paragraph-color-on-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* === HEADINGS === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+
+/* === HEADER === */
+header {
+  background-color: var(--paragraph-background-color);
+  color: var(--headline-color-on-color);
+  padding: 1.5rem;
+  text-align: center;
+}
+header h1, header h2 {
+  color: var(--headline-color-on-color);
+}
+
+/* === NAVIGATION === */
+nav {
+  background-color: var(--nav-background-color);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+nav a {
+  padding: 0.75rem 1.2rem;
+  text-decoration: none;
+  color: var(--nav-link-color);
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+  border-radius: 6px;
+}
+
+/* === MAIN CONTENT === */
+main {
+  text-align: center;
+}
+main img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* === BUTTONS === */
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  .button-group {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+/* Dark Mode Styles */
+.dark-theme {
+    background-color: #333; /* Dark background */
+    color: white; /* Light text */
+}
+
+.dark-theme header {
+    background-color: #222; /* Dark header */
+}
+
+.dark-theme footer {
+    background-color: #222; /* Dark footer */
+}
+
+/* Optional: Style the button to be more visible in dark mode */
+.dark-theme .btn {
+    color: #fff; /* White text in dark mode */
+    background-color: #555; /* Dark background for the button */
+}
+/* Base Styles - Already Applied to Your Layout */
+
+/* Adjust for mobile devices (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 16px; /* Reduce text size on smaller screens */
+    }
+
+    header {
+        padding: 1em;
+    }
+
+    nav {
+        font-size: 1em; /* Smaller font size for nav links */
+        flex-direction: column; /* Stack nav links vertically */
+    }
+
+    nav a {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%; /* Buttons take full width on small screens */
+        margin-top: 10px; /* Add space between buttons */
+    }
+
+    /* Adjust layout for the footer */
+    footer {
+        padding: 1em;
+    }
+}
+
+/* Adjust for tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        text-align: left; /* Align header to the left for tablets */
+    }
+
+    nav {
+        font-size: 1.1em; /* Slightly larger font for tablet */
+        flex-direction: row; /* Stack nav items horizontally */
+    }
+
+    .btn {
+        width: auto; /* Buttons are now more compact */
+    }
+}
+
+/* Adjust for larger screens (min-width: 1200px) */
+@media screen and (min-width: 1200px) {
+    header {
+        padding: 2em; /* More padding for large screens */
+    }
+
+    nav {
+        font-size: 1.2em; /* Larger font size for nav on large screens */
+        flex-direction: row;
+    }
+
+    .btn {
+        width: auto; /* Standard button size */
+    }
+}
