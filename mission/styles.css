@@ -47,5 +47,12 @@ main {
     padding: 20px;
     border: 1px solid #000;
     border-radius: 8px;
-    background-color: #fff; 
+}
+/* Dark theme */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+body.dark header h2 {
+    color: #82BFE8;
 }
