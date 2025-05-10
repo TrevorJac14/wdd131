@@ -1,48 +1,28 @@
-const menuButton = document.querySelector("#menuButton");
-const menu = document.querySelector("#menu");
+// Select elements
+const menuButton = document.querySelector('.menu');
+const nav = document.querySelector('nav');
+const gallery = document.querySelector('.gallery');
+const viewer = document.querySelector('.viewer');
+const viewerImage = viewer.querySelector('img');
+const closeButton = viewer.querySelector('.close-viewer');
 
-menuButton.addEventListener("click", () => {
-  menu.classList.toggle("hide");
+// Toggle nav menu
+menuButton.addEventListener('click', () => {
+  nav.classList.toggle('hide');
 });
-function handleResize() {
-    if (window.innerWidth > 1000) {
-      menu.classList.remove("hide");
-    } else {
-      menu.classList.add("hide");
-    }
-}
-  
-window.addEventListener("resize", handleResize);
-handleResize();
 
-function viewerTemplate(imagePath, altText) {
-    return `
-      <div class="viewer">
-        <button class="close-viewer">X</button>
-        <img src="${imagePath}" alt="${altText}">
-      </div>
-    `;
-}
-  
-function viewHandler(event) {
-    const target = event.target;
-    if (target.tagName === "IMG") {
-      const src = target.src;
-      const alt = target.alt;
-      const largeImage = src.replace(".jpeg", "-full.jpeg"); // Adjust as needed for your filenames
-      const viewerHTML = viewerTemplate(largeImage, alt);
-      document.body.insertAdjacentHTML("afterbegin", viewerHTML);
-  
-      const closeButton = document.querySelector(".close-viewer");
-      closeButton.addEventListener("click", closeViewer);
-    }
-}
-  
-function closeViewer() {
-    const viewer = document.querySelector(".viewer");
-    if (viewer) viewer.remove();
-}
-  
-const gallery = document.querySelector(".gallery");
-gallery.addEventListener("click", viewHandler);
-  
+// Open viewer with clicked image
+gallery.addEventListener('click', (e) => {
+  if (e.target.tagName === 'IMG') {
+    viewerImage.src = e.target.src;
+    viewerImage.alt = e.target.alt;
+    viewer.classList.remove('hide');
+  }
+});
+
+// Close viewer
+closeButton.addEventListener('click', () => {
+  viewer.classList.add('hide');
+  viewerImage.src = '';
+  viewerImage.alt = '';
+});

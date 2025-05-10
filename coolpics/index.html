@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A cool image gallery showcasing some awesome pictures.">
-  <meta name="author" content="Your Name">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cool Pics 📷</title>
-  <link rel="stylesheet" href="coolpics.css">
-  <script src="coolpics.js" defer></script>
+  <link rel="stylesheet" href="coolpics.css" />
 </head>
 <body>
   <header>
     <h1>Cool Pics 📷</h1>
     <button class="menu">Menu</button>
-    <nav>
-      <button id="menuButton">Menu</button>
-      <ul id="menu" class="hide">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>    
+    <nav class="hide">
+      <a href="#">Home</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <h2>Welcome to Cool Pics!</h2>
-    <section class="gallery">
-      <!-- Images will go here -->
-      <figure><img src="norris-sm.jpeg" alt="Picture"></figure>
-    </section>
+  <main class="gallery">
+    <img src="norris-sm.jpeg" alt="Mountain landscape" />
+    <img src="norris-sm.jpeg" alt="City skyline at night" />
+    <img src="norris-sm.jpeg" alt="Forest trail in autumn" />
+    <img src="norris-sm.jpeg" alt="Ocean waves crashing" />
+    <img src="norris-sm.jpeg" alt="Sunset over a lake" />
+    <img src="norris-sm.jpeg" alt="Desert dunes at sunrise" />
   </main>
 
+  <div class="viewer hide">
+    <button class="close-viewer" aria-label="Close viewer">✖</button>
+    <img src="" alt="Enlarged image" />
+  </div>
+
   <footer>
-    <p>©2023 Not a real site 😀</p>
+    <p>&copy; 2025 Cool Pics. All rights reserved.</p>
   </footer>
+
+  <script src="coolpics.js" type="module"></script>
 </body>
 </html>
