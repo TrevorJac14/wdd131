@@ -26,3 +26,17 @@ closeButton.addEventListener('click', () => {
   viewerImage.src = '';
   viewerImage.alt = '';
 });
+function handleResize() {
+  const menu = document.querySelector('nav');
+  if (window.innerWidth > 1000) {
+    menu.classList.remove('hide');
+  } else {
+    menu.classList.add('hide');
+  }
+}
+
+// Run on page load
+handleResize();
+
+// Listen for window resizing
+window.addEventListener('resize', handleResize);
