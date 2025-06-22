@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="recipes.css" />
+</head>
+<body>
+  <header>
+    <img src="images/recipe-book.png" alt="Recipe Book Logo" class="logo" />
+    <h1>Recipe Book</h1>
+  </header>
+
+  <main>
+    <div class="search">
+      <label for="search">Find a Recipe!</label>
+      <input type="text" id="search" placeholder="Type here..." />
+      <button id="search-btn">🔍</button>
+    </div>
+
+    <div class="recipe-card">
+      <img class="recipe-image" src="images/sweet-potato-waffle-md.jpg">
+      <div class="recipe-info">
+        <div class="tags">
+          <span class="tag">dessert</span>
+          <span class="tag">tag2</span>
+        </div>
+        <h2>Sweet Potato Waffles</h2>
+        <div class="rating">★★★★</div>
+        <p>		description: 'Savory waffles made with Sweet potato with a hint of Ginger',
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+  <div class="footer-top">
+    <div class="copyright">
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
+            Recipe icons created by Freepik - Flaticon
+        </a>
+    </div>
+
+    <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+    <div class="social">
+      <a href="#"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
+      <a href="#"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
+      <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="main.js"></script>
+  <script src="recipes.mjs"></script>
+</body>
+</html>
