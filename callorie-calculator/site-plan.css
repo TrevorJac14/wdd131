@@ -4,10 +4,10 @@
 /* Root Variables */
 :root {
   /* Site color palette */
-  --primary-color: #396e94; /* Deep blue */
-  --secondary-color: #e7c24f; /* Gold-yellow */
-  --accent1-color: #a43312; /* Dark red */
-  --accent2-color: #aabd8c; /* Soft green */
+  --primary-color: #4F6D7A;;
+  --secondary-color: #C0D6DF;
+  --accent1-color: #4A6FA5;
+  --accent2-color: #DBE9EE;
 
   /* Font families */
   --heading-font: "Roboto", sans-serif;
